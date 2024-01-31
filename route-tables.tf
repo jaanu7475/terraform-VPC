@@ -1,5 +1,5 @@
 resource "aws_route_table" "publicrt" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.my_vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
@@ -10,10 +10,3 @@ resource "aws_route_table" "publicrt" {
   }
 }
 
-resource "aws_route_table" "privatert" {
-  vpc_id = aws_vpc.main.id
- 
-  tags = {
-    Name = "Private_RT"
-  }
-}
