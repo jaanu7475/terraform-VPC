@@ -4,7 +4,12 @@ resource "aws_instance" "public-instance" {
   key_name = "Terraform-key-pair"
   subnet_id = aws_subnet.publicsubnet.id
   vpc_security_group_ids = [ aws_security_group.public-sg.id ]
+
+  tags = {
+    Name = var.instancename
+  }
 }
+
 
 
 

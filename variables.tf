@@ -1,1 +1,4 @@
 variable "regionname" {}
+variable "instancename" {
+  
+}
