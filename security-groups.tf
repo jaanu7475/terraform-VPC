@@ -16,7 +16,7 @@ resource "aws_security_group" "private-sg" {
   vpc_id = aws_vpc.main.id
 
    ingress {
-    description = "Allow all traffic for public access"
+    description = "Allow all traffic for private access"
     from_port = 0
     to_port = 0 
     protocol = "-1"
